@@ -34,6 +34,14 @@
     Return
 }
 
+; Keyboard Layout
+; Hyper+L
+#+^!l::
+{
+    Run("https://configure.zsa.io/moonlander/layouts/qZBv3/latest/0")
+    Return
+}
+
 ; Excel
 ; Hyper+E
 #+^!e::
