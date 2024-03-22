@@ -1,6 +1,8 @@
+$appsExcluded = @("Microsoft.WindowsTerminal")
+
 # Get all AppX packages
 $apps = Get-AppxPackage | ForEach-Object {
-    Add-Member -InputObject $_ -MemberType NoteProperty -Name "Command" -Value ("explorer.exe shell:appsFolder\" + $_.PackageFamilyName + "!" + ($_.PackageFamilyName.split('_')[0])) -PassThru
+    Add-Member -InputObject $_ -MemberType NoteProperty -Name "Command" -Value ("explorer.exe shell:appsFolder\" + $_.PackageFamilyName + "!" + ($_.Name -in $appsExcluded ? "App" : $_.PackageFamilyName.split('_')[0])) -PassThru
 }
 
 # Initialize INI content
