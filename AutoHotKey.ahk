@@ -82,6 +82,14 @@
     Return
 }
 
+; SourceTree
+; Hyper+B
+#+^!b::
+{
+    Run("C:\Users\erikf\AppData\Local\SourceTree\SourceTree.exe")
+    Return
+}
+
 ; Outlook (New)
 ; Hyper+M
 #+^!m::
